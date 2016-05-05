@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "gulp test",
-    "postinstall": "./node_modules/bower/bin/bower install && gulp build"
+    "postinstall": "./node_modules/bower/bin/bower install && ./node_modules/gulp/bin/gulp.js build"
   },
   "author": "gokultp",
   "repository": "gokultp/course-predictor",
