@@ -18,7 +18,11 @@ const config = {
   // port on which to listen
   port: process.env.PORT || 5000,
   // path to root directory of this app
-  root: path.normalize(__dirname)
+  root: path.normalize(__dirname),
+  // admin option
+  admin: true,
+  // cron for crawling
+  cron: false
 };
 
 // EXPRESS SET-UP
@@ -40,7 +44,7 @@ app.use(helmet());
 // load all models
 require(path.join(config.root, 'app/models'));
 // load all controllers
-app.use('/', require(path.join(config.root, 'app/controllers')));
+app.use('/', require(path.join(config.root, 'app/routes')));
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');
