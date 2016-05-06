@@ -79,3 +79,8 @@ process.on('SIGINT', () => {
   server.close();
   process.exit();
 });
+
+if(config.cron){
+	import {runCron} from 'controller/crawler.server.controller'
+	runCron();
+}
