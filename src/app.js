@@ -8,6 +8,8 @@ import express from 'express';
 import favicon from 'serve-favicon';
 import helmet from 'helmet';
 import mongoose from 'mongoose';
+import {runCron} from 'controller/crawler.server.controller'
+
 
 // BASIC CONFIG
 const config = {
@@ -81,6 +83,5 @@ process.on('SIGINT', () => {
 });
 
 if(config.cron){
-	import {runCron} from 'controller/crawler.server.controller'
 	runCron();
 }
