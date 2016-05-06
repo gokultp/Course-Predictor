@@ -8,7 +8,7 @@ import express from 'express';
 import favicon from 'serve-favicon';
 import helmet from 'helmet';
 import mongoose from 'mongoose';
-import {runCron} from 'controller/crawler.server.controller'
+import {runCron} from 'controller/crawler.server.controller';
 
 
 // BASIC CONFIG
