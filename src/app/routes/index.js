@@ -3,7 +3,6 @@
 // it also sets up basic express routes
 
 import express from 'express';
-import mongoose from 'mongoose';
 import movies from '../controllers/movies.server.controller';
 
 

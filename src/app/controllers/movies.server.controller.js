@@ -1,4 +1,5 @@
 'use strict';
+import mongoose from 'mongoose';
 
 // load models
 const Movie = mongoose.model('Movie');
