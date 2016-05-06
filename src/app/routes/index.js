@@ -4,9 +4,9 @@
 
 import express from 'express';
 import mongoose from 'mongoose';
+import movies from '../controllers/movies.server.controller';
 
-// load models
-const Movie = mongoose.model('Movie');
+
 
 // create router
 const router = express.Router();
@@ -19,15 +19,7 @@ router.get('/', (req, res, next) => {
     title: 'course-predictor'
   });
 });
-router.get('/movies', (req, res, next) => {
-  Movie.find((err, movies) => {
-    if (err) return next(err);
-    res.render('movies', {
-      title: 'Movies!',
-      movies
-    });
-  });
-});
+router.get('/movies', movies.getMovie);
 
 // export router
 module.exports = router;
