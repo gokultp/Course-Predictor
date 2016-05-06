@@ -3,7 +3,7 @@
 // it also sets up basic express routes
 
 import express from 'express';
-import movies from '../controllers/movies.server.controller';
+import * as movies from '../controllers/movies.server.controller';
 
 
 
