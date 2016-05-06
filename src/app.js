@@ -24,7 +24,7 @@ const config = {
   // admin option
   admin: true,
   // cron for crawling
-  cron: false
+  cron: true
 };
 
 // EXPRESS SET-UP
