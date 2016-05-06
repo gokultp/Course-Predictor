@@ -3,7 +3,7 @@
 import {CronJob} from 'cron';
 
 var consistencyCron = new CronJob({
-	cronTime: '/10 * * * * *',
+	cronTime: '10 * * * * *',
 	onTick:()=>{
 		console.log("Done---------------");
 	},
