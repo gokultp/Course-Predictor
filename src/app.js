@@ -12,11 +12,11 @@ import mongoose from 'mongoose';
 // BASIC CONFIG
 const config = {
   // address of mongodb
-  db: process.env.MONGOURI || 'mongodb://course_admin:Course123@ds013172.mlab.com:13172/course_predictor',
+  db: 'mongodb://course_admin:Course123@ds013172.mlab.com:13172/course_predictor',
   // environment
   env: process.env.NODE_ENV || 'development',
   // port on which to listen
-  port: 5000,
+  port: process.env.PORT || 5000,
   // path to root directory of this app
   root: path.normalize(__dirname)
 };
