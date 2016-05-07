@@ -30,8 +30,8 @@ const config = {
 // EXPRESS SET-UP
 // create app
 const app = express();
-// use jade and set views and static directories
-app.set('view engine', 'jade');
+// use ejs and set views and static directories
+app.set('view engine', 'ejs');
 app.set('views', path.join(config.root, 'app/views'));
 app.use(express.static(path.join(config.root, 'static')));
 //add middlewares
