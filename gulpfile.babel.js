@@ -146,7 +146,6 @@ gulp.task('scripts', ['lint:scripts'], () =>
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.uglify())
-	.pipe($.concat('bundle.js'))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(PATHS.scripts.dest))
     .pipe($.print(fp => `script: ${fp}`))
